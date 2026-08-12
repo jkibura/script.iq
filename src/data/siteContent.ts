@@ -1,4 +1,5 @@
 import heroImg from "../assets/hero.png"
+import logoImg from "../assets/vite.svg"
 import type {
     Brand,
     NavLinks,
@@ -22,7 +23,7 @@ import {
 
 export const brand: Brand = {
         name: "script.iq",
-        logo: "https://script.iq/logo.png",
+        logo: logoImg,
         span: "script.iq",
         description: "script.iq",
         href: "https://script.iq"
@@ -160,7 +161,7 @@ export const whatsAppConfig: WhatsAppConfig = {
 
 export const footerContent: FooterContent = {
     brand: {
-        logo: heroImg,
+        logo: logoImg,
         href: "#",
         description: "your home of thought"
     },
