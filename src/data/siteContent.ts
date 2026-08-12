@@ -4,6 +4,7 @@ import churchCover from "/images/notebooks/church-front.jpeg"
 import uniCover from "/images/notebooks/uni-front.jpeg"
 import journalCover from "/images/notebooks/journal-front.jpeg"
 import customCover from "/images/notebooks/custom-front.png"
+import backPreview from "/images/notebooks/back-preview.jpeg"
 import type {
     Brand,
     NavLinks,
@@ -118,7 +119,7 @@ export const productGridSection: ProductGridContent = {
       title: 'Church Edition',
       description: 'Crafted for sermon notes, scripture journaling, and prayer logs with specialized dual-column margins.',
       coverImage: churchCover,
-      pagePreviewImage: '/images/notebooks/church-page-preview.webp',
+      pagePreviewImage: backPreview,
       price: 45,
       badge: 'Most Popular',
       href: '#church-edition',
@@ -128,7 +129,7 @@ export const productGridSection: ProductGridContent = {
       title: 'Academic Edition',
       description: 'Engineered for intensive lecture notes and research indexing with numbered pages and matrix layouts.',
       coverImage: uniCover,
-      pagePreviewImage: '/images/notebooks/comrade-page-preview.webp',
+      pagePreviewImage: backPreview,
       price: 38,
       href: '#academic-edition',
     },
@@ -137,7 +138,7 @@ export const productGridSection: ProductGridContent = {
       title: 'Custom Leather Journal',
       description: 'Hand-stitched full-grain leather cover with custom gold-foil monogramming and archival gilt edges.',
       coverImage: journalCover,
-      pagePreviewImage: '/images/notebooks/church-page-preview.webp',
+      pagePreviewImage: backPreview,
       price: 'From $65',
       badge: 'Bespoke',
       href: '#custom-leather',
@@ -147,7 +148,7 @@ export const productGridSection: ProductGridContent = {
       title: 'Custom Notebook For Your Brand',
       description: 'Hand-stitched full-grain leather cover with custom gold-foil monogramming and archival gilt edges.',
       coverImage: customCover,
-      pagePreviewImage: '/images/notebooks/comrade-page-preview.webp',
+      pagePreviewImage: backPreview,
       price: 'From $65',
       badge: 'Bespoke',
       href: '#custom-leather',
@@ -341,7 +342,7 @@ export const ctaBannerSection: CtaBannerContent = {
 export const footerSection: FooterContent = {
   brandName: 'ScriptIQ',
   tagline: 'Where Sacred Text Meets Masterful Craft.',
-  conciergeEmail: 'concierge@scriptiq.com',
+  conciergeEmail: 'script.iqnotebooks@gmail.com',
   copyrightText: `© ${new Date().getFullYear()} ScriptIQ Leathercraft. All rights reserved.`,
   links: [
     { label: 'Bespoke Editions', href: '#editions' },
