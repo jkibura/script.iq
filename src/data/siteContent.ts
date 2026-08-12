@@ -1,4 +1,6 @@
-import heroImg from "/images/hero/hero.jpg"
+// import heroImg from "/images/hero/hero.png"
+// import heroImg from "/images/hero/hero1.jpg"
+import heroImg from "/images/hero/logo.jpeg"
 import logoImg from "/favicon.ico"
 import churchCover from "/images/notebooks/church-front.jpeg"
 import uniCover from "/images/notebooks/uni-front.jpeg"
