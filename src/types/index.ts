@@ -58,7 +58,7 @@ export interface NotebookProduct {
   price: number | string;
   badge?: string;
   href?: string;
-  
+  isCustom?: boolean;
 }
 
 export interface ProductGridContent {
