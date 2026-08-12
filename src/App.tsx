@@ -3,6 +3,9 @@ import Hero from "./components/sections/Hero/Hero"
 import ProductGrid from "./components/sections/ProductGrid/ProductGrid"
 import SpecSheet from "./components/sections/SpecSheet/SpecSheet"
 import Testimonials from "./components/sections/Testimonials/Testimonials"
+import Faq from "./components/sections/FAQs/FAQs"
+import CtaBanner from "./components/sections/CTA/CTA"
+import Footer from "./components/layout/Footer/Footer"
 
 const App = () => {
   return (
@@ -13,6 +16,9 @@ const App = () => {
         <ProductGrid />
         <SpecSheet />
         <Testimonials />
+        <Faq />
+        <CtaBanner />
+        <Footer/>
       </main>
     </>
   )

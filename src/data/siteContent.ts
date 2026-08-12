@@ -17,15 +17,16 @@ import type {
     FAQContent,
     ContactContent,
     WhatsAppConfig,
+    CtaBannerContent,
     FooterContent
 } from "../types/index"
-import {
-    FaInstagram,
-    FaTwitter,
-    FaLinkedin,
-    FaYoutube,
-    FaPinterest
-} from "react-icons/fa"
+// import {
+//     FaInstagram,
+//     FaTwitter,
+//     FaLinkedin,
+//     FaYoutube,
+//     FaPinterest
+// } from "react-icons/fa"
 
 
 export const brand: Brand = {
@@ -242,41 +243,70 @@ export const testimonialsSection: TestimonialsContent = {
   ],
 };
 
-export const faqContent: FAQContent = {
-    heading: "Because we care about you.",
-    items: [
-        {   
-            id: "1",
-            question: "What is lay-flat binding?",
-            answer: "Lay-flat binding opens 180° flat for smooth, edge-to-edge writing."
-        },
-        {
-            id: "2",
-            question: "How does custom cover printing work for 400 KES?",
-            answer: "Simply select the Custom Cover Edition, upload your design, image, or text (like your name or company logo), and pick your preferred inner paper style (Ruled, Dot-Grid, or Unlined). We precision-print your cover and ship it out within 48 hours—at no extra charge beyond the standard 400 KES price."
-        },
-        {
-            id: "3",
-            question: "How do I pay using M-Pesa on the website?",
-            answer: "When you click Buy Now or Checkout, enter your phone number. You’ll instantly receive an M-Pesa STK Push prompt on your screen asking for your PIN. Once entered, your payment clears automatically on our page without needing to manually copy transaction codes."
-        },
-        {
-            id: "4",
-            question: "Will gel pens, fountain pens, or highlighters bleed through the pages?",
-            answer: "No. We use high-grade 80 GSM (and 100 GSM on our Unlined Canvas) fountain-pen-friendly paper engineered to prevent ink ghosting and feathering"
-        },
-        {
-            id: "5",
-            question: "How long does delivery take across Kenya?",
-            answer: "Nairobi & Environs: Same-day or next-day delivery via direct courier.\n\nRest of Kenya: 24–48 hours via trusted parcel services (Wells Fargo, Easy Coach, or G4S)."
-        },
-        {
-            id: "6",
-            question: "Can I order notebooks in bulk for corporate events or weddings?",
-            answer: "Absolutely! For bulk orders over 20 pieces with custom logo engraving, contact us directly via WhatsApp or email for dedicated corporate pricing and volume discounts."
-        },
-    ]
-}
+// export const faqContent: FAQContent = {
+//     title: "Because we care about you.",
+//     items: [
+//         {   
+//             id: "1",
+//             question: "What is lay-flat binding?",
+//             answer: "Lay-flat binding opens 180° flat for smooth, edge-to-edge writing."
+//         },
+//         {
+//             id: "2",
+//             question: "How does custom cover printing work for 400 KES?",
+//             answer: "Simply select the Custom Cover Edition, upload your design, image, or text (like your name or company logo), and pick your preferred inner paper style (Ruled, Dot-Grid, or Unlined). We precision-print your cover and ship it out within 48 hours—at no extra charge beyond the standard 400 KES price."
+//         },
+//         {
+//             id: "3",
+//             question: "How do I pay using M-Pesa on the website?",
+//             answer: "When you click Buy Now or Checkout, enter your phone number. You’ll instantly receive an M-Pesa STK Push prompt on your screen asking for your PIN. Once entered, your payment clears automatically on our page without needing to manually copy transaction codes."
+//         },
+//         {
+//             id: "4",
+//             question: "Will gel pens, fountain pens, or highlighters bleed through the pages?",
+//             answer: "No. We use high-grade 80 GSM (and 100 GSM on our Unlined Canvas) fountain-pen-friendly paper engineered to prevent ink ghosting and feathering"
+//         },
+//         {
+//             id: "5",
+//             question: "How long does delivery take across Kenya?",
+//             answer: "Nairobi & Environs: Same-day or next-day delivery via direct courier.\n\nRest of Kenya: 24–48 hours via trusted parcel services (Wells Fargo, Easy Coach, or G4S)."
+//         },
+//         {
+//             id: "6",
+//             question: "Can I order notebooks in bulk for corporate events or weddings?",
+//             answer: "Absolutely! For bulk orders over 20 pieces with custom logo engraving, contact us directly via WhatsApp or email for dedicated corporate pricing and volume discounts."
+//         },
+//     ]
+// }
+
+export const faqSection: FAQContent = {
+  badge: '✦ Clarity',
+  title: 'Frequently Asked Questions',
+  subtitle: 'Everything you need to know about our archival paper, customization timeline, and craftsmanship.',
+  items: [
+    {
+      id: 'paper-bleed',
+      question: 'Does the paper bleed or ghost with fountain pens?',
+      answer: 'Not at all. We specifically source 120 GSM acid-free archival paper engineered with high opacity to eliminate ghosting and ink feathering, even with heavy fountain pen nibs and wet inks.',
+    },
+    {
+      id: 'custom-timeline',
+      question: 'How long does a custom gold-foil monogrammed order take?',
+      answer: 'Custom monogrammed editions enter production immediately upon reservation and typically ship within 3 to 5 business days after hand-stamping and quality control.',
+    },
+    {
+      id: 'lay-flat',
+      question: 'Does the notebook lie completely flat while writing?',
+      answer: 'Yes. Every edition is bound using traditional Smyth-sewn binding across individual paper signatures, allowing the journal to rest completely 180° flat without forcing the spine.',
+    },
+    {
+      id: 'bulk-orders',
+      question: 'Do you offer bulk orders for churches, academic institutions, or executive gifts?',
+      answer: 'Yes. We offer bespoke corporate and institutional orders with custom debossed logos, specialized interior inserts, and tiered volume pricing.',
+    },
+  ],
+};
+
 
 
 export const contactContent: ContactContent = {
@@ -292,50 +322,31 @@ export const whatsAppConfig: WhatsAppConfig = {
     message: "Hey, I have an inquiry about ..."
 }
 
-export const footerContent: FooterContent = {
-    brand: {
-        logo: logoImg,
-        href: "#",
-        description: "your home of thought"
-    },
-    contact: {
-        office: "Parklands, Nairobi",
-        address: "Nairobi, Kenya",
-        email: "script.iq@gmail.com",
-        phoneNumber: "+254712398746"
-    },
-    socials: {
-        instagram: {
-            icon: FaInstagram,
-            href: "https://www.instagram.com/script.iq",
-            arialabel: "Instagram"
-        },
-        twitter: {
-            icon: FaTwitter,
-            href: "https://twitter.com/scriptiq",
-            arialabel: "Twitter"
-        },
-        linkedin: {
-            icon: FaLinkedin,
-            href: "https://www.linkedin.com/script.iq",
-            arialabel: "LinkedIn"
-        },
-        youtube: {
-            icon: FaYoutube,
-            href: "https://www.youtube.com/script.iq",
-            arialabel: "YouTube"
-        },
-        pinterest: {
-            icon: FaPinterest,
-            href: "https://www.pinterest.com/script.iq",
-            arialabel: "Pinterest"
-        }               
-    },
-    legal: {
-        copyright: "script.iq",
-        terms: "Terms",
-        privacy: "Privacy",
-        termsHref: "#terms",
-        privacyHref: "#privacy"
-    }
-}
+// 
+
+export const ctaBannerSection: CtaBannerContent = {
+  badge: '✦ Begin Your Legacy',
+  title: 'Ready to Craft Your Heirloom Edition?',
+  description: 'Experience the distinction of hand-bound 120GSM paper wrapped in heritage full-grain leather. Built for daily reflection and preserved for generations.',
+  primaryCta: {
+    label: 'Explore Editions',
+    href: '#editions',
+  },
+  secondaryCta: {
+    label: 'Concierge Inquiry',
+    href: '#concierge',
+  },
+};
+
+export const footerSection: FooterContent = {
+  brandName: 'ScriptIQ',
+  tagline: 'Where Sacred Text Meets Masterful Craft.',
+  conciergeEmail: 'concierge@scriptiq.com',
+  copyrightText: `© ${new Date().getFullYear()} ScriptIQ Leathercraft. All rights reserved.`,
+  links: [
+    { label: 'Bespoke Editions', href: '#editions' },
+    { label: 'Craftsmanship', href: '#craftsmanship' },
+    { label: 'Endorsements', href: '#testimonials' },
+    { label: 'FAQ', href: '#faq' },
+  ],
+};

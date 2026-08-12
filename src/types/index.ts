@@ -1,4 +1,4 @@
-import type { IconType } from 'react-icons'
+// import type { IconType } from 'react-icons'
 //Header
 export interface Brand {
     name?: string
@@ -110,7 +110,7 @@ export interface TrustBarContent {
     heading?: string
     stats: TrustStat[]
 }
-
+ 
 
 //FAQ
 export interface FAQItem {
@@ -120,7 +120,10 @@ export interface FAQItem {
 }
 
 export interface FAQContent {
-    heading: string
+    badge?: string
+    title: string
+    subtitle: string
+    // heading: string
     items: FAQItem[]
 }
 
@@ -144,39 +147,67 @@ export interface WhatsAppConfig {
 
 
 //Footer
-export interface contact {
-    office?: string
-    address?: string
-    email: string
-    phoneNumber: string
+// export interface contact {
+//     office?: string
+//     address?: string
+//     email: string
+//     phoneNumber: string
+// }
+
+// export interface SocialLink {
+//     icon: IconType
+//     href: string
+//     arialabel?: string
+// }
+
+// export interface socials {
+//     facebook?: SocialLink
+//     instagram?: SocialLink
+//     twitter?: SocialLink
+//     linkedin?: SocialLink
+//     youtube?: SocialLink
+//     pinterest?: SocialLink
+// }
+
+// export interface legal {
+//     copyright: string
+//     terms?: string
+//     privacy?: string
+//     termsHref?: string
+//     privacyHref?: string
+// }
+
+// export interface FooterContent {
+//     brand: Brand
+//     contact: contact
+//     socials: socials
+//     legal: legal
+// }
+
+
+export interface CtaBannerContent {
+  badge?: string;
+  title: string;
+  description: string;
+  primaryCta: {
+    label: string;
+    href: string;
+  };
+  secondaryCta?: {
+    label: string;
+    href: string;
+  };
 }
 
-export interface SocialLink {
-    icon: IconType
-    href: string
-    arialabel?: string
-}
-
-export interface socials {
-    facebook?: SocialLink
-    instagram?: SocialLink
-    twitter?: SocialLink
-    linkedin?: SocialLink
-    youtube?: SocialLink
-    pinterest?: SocialLink
-}
-
-export interface legal {
-    copyright: string
-    terms?: string
-    privacy?: string
-    termsHref?: string
-    privacyHref?: string
+export interface FooterLink {
+  label: string;
+  href: string;
 }
 
 export interface FooterContent {
-    brand: Brand
-    contact: contact
-    socials: socials
-    legal: legal
+  brandName: string;
+  tagline: string;
+  conciergeEmail: string;
+  copyrightText: string;
+  links: FooterLink[];
 }
