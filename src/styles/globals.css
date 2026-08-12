@@ -157,6 +157,7 @@ input:focus, select:focus, textarea:focus {
 .gold-gradient-text {
   background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold-primary) 50%, var(--color-gold-dark) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
