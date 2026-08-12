@@ -100,7 +100,7 @@ export const heroContent: HeroContent = {
   },
   secondaryCta: {
     label: 'Order Custom Cover',
-    href: '#custom',
+    href: '#custom-notebook',
   },
   image: {
     src: heroImg,
