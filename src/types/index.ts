@@ -4,11 +4,13 @@ export interface Brand {
     name?: string
     logo?: string
     span?: string
+    alt?: string
     description?: string
     href?: string
 }
 
 export interface navLink {
+    id: string
     label: string
     href: string
 }
@@ -32,9 +34,12 @@ export interface HeaderContent {
 // Hero Content
 export interface HeroContent {
     eyebrow?: string
-    title: string
+    badge?: string
+    title?: string
+    headline?: string
     highlight?: string
-    subtitle: string
+    subtitle?: string
+    description?: string
     primaryCta: CTALink
     secondaryCta?: CTALink
     image?: {

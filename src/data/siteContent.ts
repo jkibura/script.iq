@@ -1,5 +1,5 @@
-import heroImg from "../assets/hero.png"
-import logoImg from "../assets/vite.svg"
+import heroImg from "/hero/hero.png"
+import logoImg from "/favicon.ico"
 import type {
     Brand,
     NavLinks,
@@ -22,45 +22,34 @@ import {
 
 
 export const brand: Brand = {
-        name: "script.iq",
+        name: "ScriptIQ",
         logo: logoImg,
-        span: "script.iq",
-        description: "script.iq",
-        href: "https://script.iq"
+        alt: "ScriptIQ Emblem",
+        // span: "script.iq",
+        // description: "script.iq",
+        href: "#"
     }
 
 export const navLinks: NavLinks = {
-    home: {
-        label: 'Home',
-        href: '#home',
+    church: {
+        id: 'church',
+        label: 'Church Edition',
+        href: '#church',
     },
-    about: {
-        label: 'About',
-        href: '#about',
+    comrade: {
+        id: 'comrade',
+        label: 'Academic Edition',
+        href: '#comrade',
     },
-    services: {
-        label: 'Services',
-        href: '#services',
+    journal: {
+        id: 'journal',
+        label: 'Journal',
+        href: '#journal',
     },
-    process: {
-        label: 'How It Works',
-        href: '#process',
-    },
-    reviews: {
-        label: 'Reviews',
-        href: '#reviews',
-    },
-    pricing: {
-        label: 'Pricing',
-        href: '#pricing',
-    },
-    faq: {
-        label: 'FAQ',
-        href: '#faq',
-    },
-    contact: {
-        label: 'Contact',
-        href: '#contact',
+    custom: {
+        id: 'custom',
+        label: 'Custom Cover Edition',
+        href: '#custom',
     },
 }
 
@@ -76,22 +65,40 @@ export const headerContent: HeaderContent = {
 }
 
 
+// export const heroContent: HeroContent = {
+//     title: "For the thinkers",
+//     subtitle: "Thoughtfully engineered with bleed-resistant paper and lay-flat binding. Choose from our 3 signature layouts or create a custom cover tailored to your brand.",
+//     primaryCta: {
+//         label: "Pick Your Style — 400 KES",
+//         href: "#pricing"
+//     },
+//     secondaryCta: {
+//         label: "Explore Custom Printing →",
+//         href: "#contact"
+//     },
+//     image: {
+//         src: heroImg,
+//         alt: "script.iq"
+//     }
+// }
+
 export const heroContent: HeroContent = {
-    title: "For the thinkers",
-    subtitle: "Thoughtfully engineered with bleed-resistant paper and lay-flat binding. Choose from our 3 signature layouts or create a custom cover tailored to your brand.",
-    primaryCta: {
-        label: "Pick Your Style — 400 KES",
-        href: "#pricing"
-    },
-    secondaryCta: {
-        label: "Explore Custom Printing →",
-        href: "#contact"
-    },
-    image: {
-        src: heroImg,
-        alt: "script.iq"
-    }
-}
+  badge: '✦ Bespoke Leathercraft',
+  headline: 'Where Sacred Text Meets Masterful Craft',
+  description: 'Hand-bound journals and tailored editions engineered for spiritual reflection, academic pursuit, and enduring legacies.',
+  primaryCta: {
+    label: 'Explore Editions',
+    href: '#editions',
+  },
+  secondaryCta: {
+    label: 'Order Custom Cover',
+    href: '#custom',
+  },
+  image: {
+    src: heroImg,
+    alt: 'ScriptIQ Custom Leather Journal Showcase',
+  },
+};
 
 export const trustBarContent: TrustBarContent = {
     stats: [
