@@ -42,22 +42,22 @@ export const navLinks: NavLinks = {
     church: {
         id: 'church',
         label: 'Church Edition',
-        href: '#church',
+        href: '#church-edition',
     },
     comrade: {
         id: 'comrade',
         label: 'Academic Edition',
-        href: '#comrade',
+        href: '#comrade-edition',
     },
     journal: {
         id: 'journal',
         label: 'Journal',
-        href: '#journal',
+        href: '#custom-leather',
     },
     custom: {
         id: 'custom',
         label: 'Custom Cover Edition',
-        href: '#custom',
+        href: '#custom-notebook',
     },
 }
 
@@ -143,7 +143,7 @@ export const productGridSection: ProductGridContent = {
       href: '#custom-leather',
     },
     {
-      id: 'custom-leather',
+      id: 'custom-notebook',
       title: 'Custom Notebook For Your Brand',
       description: 'Hand-stitched full-grain leather cover with custom gold-foil monogramming and archival gilt edges.',
       coverImage: customCover,

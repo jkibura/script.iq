@@ -29,7 +29,7 @@ export const ProductGrid: React.FC = () => {
             const isFlipped = flippedCards[product.id];
 
             return (
-              <article key={product.id} className={styles.card}>
+              <article id={product.id} key={product.id} className={styles.card}>
                 <div>
                   {/* 3D Flip Image Container */}
                   <div

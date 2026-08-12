@@ -49,8 +49,7 @@ export const Header: React.FC = () => {
 
         {/* Desktop CTA Button */}
         <a href={cta.href} 
-            // className={styles.desktopCta}
-            className="btn-primary">
+            className={`${styles.desktopCta} btn-primary`}>
           {cta.label}
         </a>
 
