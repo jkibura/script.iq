@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { productGridSection } from '../../../data/siteContent';
 import styles from './ProductGrid.module.css';
+import CustomizerModal from '../CustomNotebook/CustomizerModal';
 
 export const ProductGrid: React.FC = () => {
   const { title, subtitle, products } = productGridSection;
   // State tracking flipped cards for mobile touch support
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleFlip = (id: string) => {
     setFlippedCards((prev) => ({
@@ -34,7 +36,7 @@ export const ProductGrid: React.FC = () => {
                     className={`${styles.flipContainer} ${
                       isFlipped ? styles.flipContainerFlipped : ''
                     }`}
-                    onClick={() => toggleFlip(product.id)}
+                    onClick={() => (toggleFlip(product.id))}
                     title="Click or hover to flip cover"
                   >
                     {/* Front: Notebook Cover */}
@@ -77,15 +79,32 @@ export const ProductGrid: React.FC = () => {
                   <span className={styles.price}>
                     {typeof product.price === 'number' ? `$${product.price}` : product.price}
                   </span>
-                  <a href={product.href || `#${product.id}`} className="btn-primary">
-                    Order Now
-                  </a>
+
+                  {product.isCustom? (
+                    <button
+                      type="button"
+                      onClick={() => setIsModalOpen(true)}
+                      className="btn-primary"
+                    >
+                      Configure Edition
+                    </button>
+                  ) : (
+                    <a href={product.href || `#${product.id}`} className="btn-primary">
+                      Order Now
+                    </a>
+                  )}
+
                 </div>
               </article>
             );
           })}
         </div>
       </div>
+      
+      {/* Interactive Bespoke Customizer Modal */}
+      <CustomizerModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} />  
     </section>
   );
 };

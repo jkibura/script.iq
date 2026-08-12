@@ -3,6 +3,7 @@ import logoImg from "/favicon.ico"
 import churchCover from "/images/notebooks/church-front.jpeg"
 import uniCover from "/images/notebooks/uni-front.jpeg"
 import journalCover from "/images/notebooks/journal-front.jpeg"
+import customCover from "/images/notebooks/custom-front.png"
 import type {
     Brand,
     NavLinks,
@@ -12,6 +13,7 @@ import type {
     ProductGridContent,
     SpecSheetContent,
     TrustBarContent,
+    TestimonialsContent,
     FAQContent,
     ContactContent,
     WhatsAppConfig,
@@ -139,6 +141,17 @@ export const productGridSection: ProductGridContent = {
       badge: 'Bespoke',
       href: '#custom-leather',
     },
+    {
+      id: 'custom-leather',
+      title: 'Custom Notebook For Your Brand',
+      description: 'Hand-stitched full-grain leather cover with custom gold-foil monogramming and archival gilt edges.',
+      coverImage: customCover,
+      pagePreviewImage: '/images/notebooks/comrade-page-preview.webp',
+      price: 'From $65',
+      badge: 'Bespoke',
+      href: '#custom-leather',
+      isCustom: true
+    },
   ],
 };
 
@@ -200,30 +213,65 @@ export const trustBarContent: TrustBarContent = {
     ]
 }
 
+export const testimonialsSection: TestimonialsContent = {
+  badge: '✦ Endorsements',
+  title: 'Voices of Legacy',
+  subtitle: 'Trusted by theologians, scholars, and creators who demand uncompromising permanence.',
+  items: [
+    {
+      id: '1',
+      quote: 'The 120GSM paper completely changed my study flow. Zero fountain pen bleed, even with heavy iron gall inks. It feels less like a notebook and more like an heirloom.',
+      author: 'Dr. Aris Thorne',
+      roleTitle: 'Professor of Historical Theology',
+      location: 'Oxford, UK',
+    },
+    {
+      id: '2',
+      quote: 'The lay-flat binding is an engineering marvel for long archival research sessions. ScriptIQ has achieved something truly rare: functional perfection cloaked in timeless luxury.',
+      author: 'Elena Rostova',
+      roleTitle: 'Executive Architect & Book Binder',
+      location: 'Vienna, Austria',
+    },
+    {
+      id: '3',
+      quote: 'Having our ministry emblem blind-debossed into custom full-grain leather was effortless. The reverence in craft is immediately tangible the moment you hold it.',
+      author: 'Pastor Marcus Vance',
+      roleTitle: 'Senior Pastor & Author',
+      location: 'Dallas, TX',
+    },
+  ],
+};
+
 export const faqContent: FAQContent = {
     heading: "Because we care about you.",
     items: [
-        {
+        {   
+            id: "1",
             question: "What is lay-flat binding?",
             answer: "Lay-flat binding opens 180° flat for smooth, edge-to-edge writing."
         },
         {
+            id: "2",
             question: "How does custom cover printing work for 400 KES?",
             answer: "Simply select the Custom Cover Edition, upload your design, image, or text (like your name or company logo), and pick your preferred inner paper style (Ruled, Dot-Grid, or Unlined). We precision-print your cover and ship it out within 48 hours—at no extra charge beyond the standard 400 KES price."
         },
         {
+            id: "3",
             question: "How do I pay using M-Pesa on the website?",
             answer: "When you click Buy Now or Checkout, enter your phone number. You’ll instantly receive an M-Pesa STK Push prompt on your screen asking for your PIN. Once entered, your payment clears automatically on our page without needing to manually copy transaction codes."
         },
         {
+            id: "4",
             question: "Will gel pens, fountain pens, or highlighters bleed through the pages?",
             answer: "No. We use high-grade 80 GSM (and 100 GSM on our Unlined Canvas) fountain-pen-friendly paper engineered to prevent ink ghosting and feathering"
         },
         {
+            id: "5",
             question: "How long does delivery take across Kenya?",
             answer: "Nairobi & Environs: Same-day or next-day delivery via direct courier.\n\nRest of Kenya: 24–48 hours via trusted parcel services (Wells Fargo, Easy Coach, or G4S)."
         },
         {
+            id: "6",
             question: "Can I order notebooks in bulk for corporate events or weddings?",
             answer: "Absolutely! For bulk orders over 20 pieces with custom logo engraving, contact us directly via WhatsApp or email for dedicated corporate pricing and volume discounts."
         },

@@ -62,25 +62,41 @@ export interface NotebookProduct {
 }
 
 export interface ProductGridContent {
-  title: string;
-  subtitle: string;
-  products: NotebookProduct[];
+    title: string;
+    subtitle: string;
+    products: NotebookProduct[];
 }
 
 // Specs
 export interface SpecFeature {
-  id: string;
-  icon?: string;
-  title: string;
-  subtitle: string;
-  description: string;
+    id: string;
+    icon?: string;
+    title: string;
+    subtitle: string;
+    description: string;
 }
 
 export interface SpecSheetContent {
-  badge?: string;
-  title: string;
-  subtitle: string;
-  features: SpecFeature[];
+    badge?: string;
+    title: string;
+    subtitle: string;
+    features: SpecFeature[];
+}
+
+//Testimonials
+export interface Testimonial {
+    id: string;
+    quote: string;
+    author: string;
+    roleTitle: string;
+    location?: string;
+}
+
+export interface TestimonialsContent {
+    badge?: string;
+    title: string;
+    subtitle: string;
+    items: Testimonial[];
 }
 
 // TrustBar Content
@@ -98,6 +114,7 @@ export interface TrustBarContent {
 
 //FAQ
 export interface FAQItem {
+    id: string
     question: string
     answer: string
 }
