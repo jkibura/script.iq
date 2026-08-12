@@ -1,4 +1,4 @@
-import heroImg from "/hero/hero.png"
+import heroImg from "/images/hero/hero.jpg"
 import logoImg from "/favicon.ico"
 import type {
     Brand,

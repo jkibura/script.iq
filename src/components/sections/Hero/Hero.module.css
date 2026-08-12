@@ -118,6 +118,7 @@
 }
 
 .mockupImage {
+    /* aspect-ratio: 1 / 1; */
   width: 100%;
   height: auto;
   object-fit: contain;

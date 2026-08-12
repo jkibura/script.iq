@@ -42,7 +42,7 @@ export interface HeroContent {
     description?: string
     primaryCta: CTALink
     secondaryCta?: CTALink
-    image?: {
+    image: {
         src: string
         alt: string
     }

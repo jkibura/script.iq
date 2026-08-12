@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
           <div className={styles.imageContainer}>
             <img
               src={image.src}
-              alt={image.alt}
+              alt={image.alt || headline}
               className={styles.mockupImage}
               loading="eager"
             />
