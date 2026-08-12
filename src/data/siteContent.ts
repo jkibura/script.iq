@@ -1,11 +1,16 @@
 import heroImg from "/images/hero/hero.jpg"
 import logoImg from "/favicon.ico"
+import churchCover from "/images/notebooks/church-front.jpeg"
+import uniCover from "/images/notebooks/uni-front.jpeg"
+import journalCover from "/images/notebooks/journal-front.jpeg"
 import type {
     Brand,
     NavLinks,
     CTALink,
     HeaderContent,
     HeroContent,
+    ProductGridContent,
+    SpecSheetContent,
     TrustBarContent,
     FAQContent,
     ContactContent,
@@ -98,6 +103,79 @@ export const heroContent: HeroContent = {
     src: heroImg,
     alt: 'ScriptIQ Custom Leather Journal Showcase',
   },
+};
+
+
+export const productGridSection: ProductGridContent = {
+  title: 'Bespoke Editions',
+  subtitle: 'Hover over any journal to flip the cover and preview interior page layouts.',
+  products: [
+    {
+      id: 'church-edition',
+      title: 'Church Edition',
+      description: 'Crafted for sermon notes, scripture journaling, and prayer logs with specialized dual-column margins.',
+      coverImage: churchCover,
+      pagePreviewImage: '/images/notebooks/church-page-preview.webp',
+      price: 45,
+      badge: 'Most Popular',
+      href: '#church-edition',
+    },
+    {
+      id: 'academic-edition',
+      title: 'Academic Edition',
+      description: 'Engineered for intensive lecture notes and research indexing with numbered pages and matrix layouts.',
+      coverImage: uniCover,
+      pagePreviewImage: '/images/notebooks/comrade-page-preview.webp',
+      price: 38,
+      href: '#academic-edition',
+    },
+    {
+      id: 'custom-leather',
+      title: 'Custom Leather Journal',
+      description: 'Hand-stitched full-grain leather cover with custom gold-foil monogramming and archival gilt edges.',
+      coverImage: journalCover,
+      pagePreviewImage: '/images/notebooks/church-page-preview.webp',
+      price: 'From $65',
+      badge: 'Bespoke',
+      href: '#custom-leather',
+    },
+  ],
+};
+
+export const specSheetSection: SpecSheetContent = {
+  badge: '✦ Uncompromising Craft',
+  title: 'Engineered for Generations',
+  subtitle: 'Every ScriptIQ journal is hand-assembled using archival-grade materials built to outlast daily use.',
+  features: [
+    {
+      id: 'paper',
+      icon: '📜',
+      title: '120 GSM Archival Paper',
+      subtitle: 'Zero Bleed & Ghosting',
+      description: 'Ultra-opaque, acid-free pages engineered to absorb fountain pen inks without feathered edges or pass-through bleed.',
+    },
+    {
+      id: 'binding',
+      icon: '📖',
+      title: 'Smyth-Sewn Binding',
+      subtitle: '180° Lay-Flat Opening',
+      description: 'Traditional thread-bound signatures ensure your notebook rests completely flat without forcing the spine.',
+    },
+    {
+      id: 'leather',
+      icon: '✨',
+      title: 'Full-Grain Leather',
+      subtitle: 'Patina That Tells a Story',
+      description: 'Hand-selected from heritage tanneries, developing a rich character and supple feel across years of active use.',
+    },
+    {
+      id: 'gilt',
+      icon: '⚜️',
+      title: 'Gold Foil Gilt Edges',
+      subtitle: 'Archival Dust Protection',
+      description: 'Precision hand-stamped metallic edges that protect interior pages from ambient moisture while delivering timeless prestige.',
+    },
+  ],
 };
 
 export const trustBarContent: TrustBarContent = {

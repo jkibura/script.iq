@@ -48,6 +48,40 @@ export interface HeroContent {
     }
 }
 
+// Product Grid
+export interface NotebookProduct {
+  id: string;
+  title: string;
+  description: string;
+  coverImage: string;
+  pagePreviewImage: string;
+  price: number | string;
+  badge?: string;
+  href?: string;
+  
+}
+
+export interface ProductGridContent {
+  title: string;
+  subtitle: string;
+  products: NotebookProduct[];
+}
+
+// Specs
+export interface SpecFeature {
+  id: string;
+  icon?: string;
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
+export interface SpecSheetContent {
+  badge?: string;
+  title: string;
+  subtitle: string;
+  features: SpecFeature[];
+}
 
 // TrustBar Content
 export interface TrustStat {
