@@ -51,25 +51,26 @@
   border: 1px solid hsla(43, 74%, 49%, 0.3);
   color: var(--color-gold-light);
   font-family: var(--font-serif);
-  font-size: var(--size-sm);
+  font-size: var(--size-badge);
   letter-spacing: var(--tracking-wide);
   margin-bottom: var(--space-md);
 }
 
 .headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  /* font-size: clamp(2.5rem, 5vw, 4rem); */
+  font-size: var(--size-hero);
   font-weight: var(--weight-bold);
-  line-height: 1.1;
+  line-height: var(--leading-heading);
   color: var(--color-text-heading);
   margin-bottom: var(--space-md);
 }
 
 .description {
   font-family: var(--font-sans);
-  font-size: var(--size-body-lg);
+  font-size: var(--size-body);
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: var(--leading-body);
   max-width: 540px;
   margin-bottom: var(--space-xl);
 }
