@@ -7,8 +7,9 @@ import uniCover from "/images/notebooks/uni-front.jpeg"
 import journalCover from "/images/notebooks/journal-front.jpeg"
 import customCover from "/images/notebooks/custom-front.png"
 import backPreview from "/images/notebooks/back-preview.jpeg"
+import { contact } from "../config/site"
 import type {
-    Brand,
+    BrandHeader,
     NavLinks,
     CTALink,
     HeaderContent,
@@ -21,18 +22,22 @@ import type {
     ContactContent,
     WhatsAppConfig,
     CtaBannerContent,
-    FooterContent
+    FooterContent,
+    BrandFooter,
+    // Contact,
+    Socials,
+    Legal
 } from "../types/index"
-// import {
-//     FaInstagram,
-//     FaTwitter,
-//     FaLinkedin,
-//     FaYoutube,
-//     FaPinterest
-// } from "react-icons/fa"
+import {
+    FaInstagram,
+    // FaTwitter,
+    FaLinkedin,
+    // FaYoutube,
+    // FaPinterest
+} from "react-icons/fa"
 
 
-export const brand: Brand = {
+export const brand: BrandHeader = {
         name: "ScriptIQ",
         logo: logoImg,
         alt: "ScriptIQ Emblem",
@@ -41,6 +46,8 @@ export const brand: Brand = {
         href: "#"
     }
 
+
+// NAV LINKS FOR THE HEADER
 export const navLinks: NavLinks = {
     church: {
         id: 'church',
@@ -341,15 +348,62 @@ export const ctaBannerSection: CtaBannerContent = {
   },
 };
 
-export const footerSection: FooterContent = {
-  brandName: 'ScriptIQ',
+// THE OLD FOOTER SECTION CONTENT
+
+// export const footerSection: FooterContent = {
+//   brandName: 'ScriptIQ',
+//   tagline: 'Where Sacred Text Meets Masterful Craft.',
+//   conciergeEmail: 'script.iqnotebooks@gmail.com',
+//   copyrightText: `© ${new Date().getFullYear()} ScriptIQ Notebooks. All rights reserved.`,
+//   links: [
+//     { label: 'Bespoke Editions', href: '#editions' },
+//     { label: 'Craftsmanship', href: '#craftsmanship' },
+//     { label: 'Endorsements', href: '#testimonials' },
+//     { label: 'FAQ', href: '#faq' },
+//   ],
+// };
+
+
+
+// THE UPDATED FOOTER SECTION CONTENT!!!
+export const brandFooter: BrandFooter = {
+  name: 'ScriptIQ',
   tagline: 'Where Sacred Text Meets Masterful Craft.',
-  conciergeEmail: 'script.iqnotebooks@gmail.com',
-  copyrightText: `© ${new Date().getFullYear()} ScriptIQ Leathercraft. All rights reserved.`,
-  links: [
+}
+
+// THIS WILL BE FETCHED FROM THE CONFIG FILE FOR EASY MANAGEMENT OF IMPORTANT BUSINESS DETAILS.
+// export const contact: Contact = {
+//   email: 'script.iqnotebooks@gmail.com',
+//   phoneNumber: '+254798864813',
+// }
+
+export const socials: Socials = {
+  instagram: {
+      icon: FaInstagram,
+      href: 'https://www.instagram.com/harborcityeliteclean',
+      arialabel: 'Instagram',
+    },
+    linkedin: {
+      icon: FaLinkedin,
+      href: 'https://www.linkedin.com/company/harbor-city-elite-cleaning',
+      arialabel: 'LinkedIn',
+    },
+}
+
+export const legal: Legal = {
+  copyright: `© ${new Date().getFullYear()} ScriptIQ Notebooks. All rights reserved.`,
+}
+
+export const footerSection: FooterContent = {
+  brand: brandFooter,
+  contact: contact,
+  socials: socials,
+  legal: legal,
+  // NAV LINKS FOR THE FOOTER
+  navlinks: [
     { label: 'Bespoke Editions', href: '#editions' },
     { label: 'Craftsmanship', href: '#craftsmanship' },
     { label: 'Endorsements', href: '#testimonials' },
     { label: 'FAQ', href: '#faq' },
   ],
-};
+}

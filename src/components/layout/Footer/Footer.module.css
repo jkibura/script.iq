@@ -6,7 +6,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: var(--space-2xl);
   margin-bottom: var(--space-2xl);
 }
@@ -32,7 +32,7 @@
   line-height: 1.5;
 }
 
-.navCol, .conciergeCol {
+.navCol, .socialsCol, .contactCol, .conciergeCol {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -46,7 +46,7 @@
   letter-spacing: var(--tracking-wide);
 }
 
-.navList {
+.navList, .contactList {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -55,7 +55,7 @@
   gap: var(--space-xs);
 }
 
-.navLink {
+.navLink, .contactList a {
   font-family: var(--font-sans);
   font-size: var(--size-sm);
   color: var(--color-text-body);
@@ -65,6 +65,16 @@
 
 .navLink:hover {
   color: var(--color-gold-light);
+}
+
+.socialsList {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.socialsList a {
+  color: var(--color-text-body);
+  height: var(--space-3xl);
 }
 
 .conciergeText {

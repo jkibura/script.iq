@@ -1,6 +1,6 @@
-// import type { IconType } from 'react-icons'
+import type { IconType } from 'react-icons'
 //Header
-export interface Brand {
+export interface BrandHeader {
     name?: string
     logo?: string
     span?: string
@@ -25,7 +25,7 @@ export interface NavLinks {
 }
 
 export interface HeaderContent {
-    brand: Brand
+    brand: BrandHeader
     navLinks: NavLinks
     cta: CTALink
 }
@@ -199,15 +199,63 @@ export interface CtaBannerContent {
   };
 }
 
+
+// THE UPDATED FOOTER CONTENT TYPES
+export interface BrandFooter {
+    name?: string;
+    logo?: string;
+    tagline: string;
+}
+
+export interface Contact {
+    office?: string
+    address?: string
+    email: string
+    phoneNumber: string
+}
+
+export interface SocialLink {
+    icon: IconType
+    href: string
+    arialabel?: string
+}
+
+export interface Socials {
+    facebook?: SocialLink
+    instagram?: SocialLink
+    twitter?: SocialLink
+    linkedin?: SocialLink
+    youtube?: SocialLink
+    pinterest?: SocialLink
+}
+
+export interface Legal {
+    copyright: string
+    terms?: string
+    privacy?: string
+    termsHref?: string
+    privacyHref?: string
+}
+
 export interface FooterLink {
   label: string;
   href: string;
 }
 
 export interface FooterContent {
-  brandName: string;
-  tagline: string;
-  conciergeEmail: string;
-  copyrightText: string;
-  links: FooterLink[];
+    brand: BrandFooter;
+    contact: Contact;
+    socials: Socials;
+    legal: Legal;
+    navlinks: FooterLink[];
 }
+
+// THE OLD FOOTER CONTENT TYPES
+
+// export interface FooterContent {
+//   brandName: string;
+//   tagline: string;
+//   conciergeEmail: string;
+//   copyrightText: string;
+//   links: FooterLink[];
+// }

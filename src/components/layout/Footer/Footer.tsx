@@ -3,7 +3,7 @@ import { footerSection } from '../../../data/siteContent';
 import styles from './Footer.module.css';
 
 export const Footer: React.FC = () => {
-  const { brandName, tagline, conciergeEmail, copyrightText, links } = footerSection;
+  const { brand, contact, socials, legal, navlinks } = footerSection;
 
   return (
     <footer id="concierge" className={styles.footer}>
@@ -11,15 +11,15 @@ export const Footer: React.FC = () => {
         <div className={styles.grid}>
           {/* Brand Identity */}
           <div className={styles.brandCol}>
-            <h3 className={styles.brandName}>{brandName}</h3>
-            <p className={styles.tagline}>{tagline}</p>
+            <h3 className={styles.brandName}>{brand.name}</h3>
+            <p className={styles.tagline}>{brand.tagline}</p>
           </div>
 
           {/* Direct Navigation */}
           <div className={styles.navCol}>
             <span className={styles.colTitle}>Navigation</span>
             <ul className={styles.navList}>
-              {links.map((link) => (
+              {navlinks.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className={styles.navLink}>
                     {link.label}
@@ -29,20 +29,38 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          <div className={styles.socialsCol}>
+            <span className={styles.colTitle}>Socials</span>
+            <div className={styles.socialsList}>
+              {socials.instagram && <a href={socials.instagram.href} target="_blank" rel="noreferrer"><socials.instagram.icon size='28'/></a>}
+              {socials.linkedin && <a href={socials.linkedin.href} target="_blank" rel="noreferrer"><socials.linkedin.icon size='28'/></a>}
+            </div>
+          </div>
+
+          <div className={styles.contactCol}>
+            <span className={styles.colTitle}>Contacts</span>
+            <div className={styles.contactList}>
+              <a href={`tel:${contact.phoneNumber}`}>{contact.phoneNumber}</a>
+              <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              {contact.address && <p>{contact.address}</p>}
+            </div>
+          </div>
+
           {/* Bespoke Concierge */}
           <div className={styles.conciergeCol}>
             <span className={styles.colTitle}>Bespoke Concierge</span>
             <p className={styles.conciergeText}>
               Inquiring about institutional orders, custom crest debossing, or executive gifts?
             </p>
-            <a href={`mailto:${conciergeEmail}`} className={styles.emailBtn}>
-              {conciergeEmail}
+            <a href={`mailto:${contact.email}`} className={styles.emailBtn}>
+              {contact.email}
             </a>
+            
           </div>
         </div>
 
         <div className={styles.bottomBar}>
-          <p>{copyrightText}</p>
+          <p>{legal.copyright}</p>
         </div>
       </div>
     </footer>
