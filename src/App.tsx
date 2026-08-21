@@ -5,6 +5,7 @@ import SpecSheet from "./components/sections/SpecSheet/SpecSheet"
 import Testimonials from "./components/sections/Testimonials/Testimonials"
 import Faq from "./components/sections/FAQs/FAQs"
 import CtaBanner from "./components/sections/CTA/CTA"
+import WhatsAppButton from "./components/ui/WhatsAppButton/WhatsAppButton"
 import Footer from "./components/layout/Footer/Footer"
 
 const App = () => {
@@ -18,8 +19,9 @@ const App = () => {
         <Testimonials />
         <Faq />
         <CtaBanner />
-        <Footer/>
       </main>
+      <WhatsAppButton />
+      <Footer/> 
     </>
   )
 }

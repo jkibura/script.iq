@@ -77,7 +77,7 @@ export const ProductGrid: React.FC = () => {
                 {/* Card Footer */}
                 <div className={styles.footer}>
                   <span className={styles.price}>
-                    {typeof product.price === 'number' ? `$${product.price}` : product.price}
+                    {typeof product.price === 'number' ? `Kes${product.price}` : product.price}
                   </span>
 
                   {product.isCustom? (

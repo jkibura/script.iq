@@ -140,8 +140,10 @@ export interface ContactContent {
 
 //WhatsAppConfig
 export interface WhatsAppConfig {
-    phoneNumber: string
-    message: string
+    whatsAppNumber: string
+    businessName: string
+    statusMessage?: string
+    chatMessage?: string
     label?: string
 }
 

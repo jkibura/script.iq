@@ -20,7 +20,6 @@ import type {
     TestimonialsContent,
     FAQContent,
     ContactContent,
-    WhatsAppConfig,
     CtaBannerContent,
     FooterContent,
     BrandFooter,
@@ -101,7 +100,7 @@ export const headerContent: HeaderContent = {
 // }
 
 export const heroContent: HeroContent = {
-  badge: '✦ Bespoke Leathercraft',
+  badge: '✦ Bespoke Notebooks',
   headline: 'Where Sacred Text Meets Masterful Craft',
   description: 'Hand-bound journals and tailored editions engineered for spiritual reflection, academic pursuit, and enduring legacies.',
   primaryCta: {
@@ -129,7 +128,7 @@ export const productGridSection: ProductGridContent = {
       description: 'Crafted for sermon notes, scripture journaling, and prayer logs with specialized dual-column margins.',
       coverImage: churchCover,
       pagePreviewImage: backPreview,
-      price: 45,
+      price: 400,
       badge: 'Most Popular',
       href: '#church-edition',
     },
@@ -139,16 +138,16 @@ export const productGridSection: ProductGridContent = {
       description: 'Engineered for intensive lecture notes and research indexing with numbered pages and matrix layouts.',
       coverImage: uniCover,
       pagePreviewImage: backPreview,
-      price: 38,
+      price: 400,
       href: '#academic-edition',
     },
     {
       id: 'custom-leather',
-      title: 'Custom Leather Journal',
+      title: 'Script Journal',
       description: 'Hand-stitched full-grain leather cover with custom gold-foil monogramming and archival gilt edges.',
       coverImage: journalCover,
       pagePreviewImage: backPreview,
-      price: 'From $65',
+      price: 'From Kes390',
       badge: 'Bespoke',
       href: '#custom-leather',
     },
@@ -158,7 +157,7 @@ export const productGridSection: ProductGridContent = {
       description: 'Hand-stitched full-grain leather cover with custom gold-foil monogramming and archival gilt edges.',
       coverImage: customCover,
       pagePreviewImage: backPreview,
-      price: 'From $65',
+      price: 'From Kes380',
       badge: 'Bespoke',
       href: '#custom-leather',
       isCustom: true
@@ -327,12 +326,6 @@ export const contactContent: ContactContent = {
     area: "Nairobi, Kenya"
 }
 
-export const whatsAppConfig: WhatsAppConfig = {
-    phoneNumber: "+254712398746",
-    message: "Hey, I have an inquiry about ..."
-}
-
-// 
 
 export const ctaBannerSection: CtaBannerContent = {
   badge: '✦ Begin Your Legacy',

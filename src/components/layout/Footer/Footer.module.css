@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   background-color: var(--color-bg-secondary);
   border-top: 1px solid var(--color-border-subtle);
   padding: var(--space-2xl) 0 var(--space-lg);
@@ -112,4 +112,163 @@
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
+} */
+
+.footer {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border-subtle);
+  padding: var(--space-2xl) 0 var(--space-lg);
 }
+
+.container {
+  max-width: 1200px; /* Adjust to match your global container width */
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.grid {
+  display: grid;
+  /* 4 columns: The 5th item (Concierge) will drop cleanly under the 1st item (Brand) */
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem var(--space-2xl); /* 3rem vertical gap between rows */
+  margin-bottom: var(--space-2xl);
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 360px;
+}
+
+.brandName {
+  font-family: var(--font-serif);
+  font-size: var(--size-h2);
+  color: var(--color-gold-light);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: var(--size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 250px;
+}
+
+.navCol, .socialsCol, .contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.conciergeCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 320px; /* Constrain width to match screenshot wrapping */
+}
+
+.colTitle {
+  font-family: var(--font-serif);
+  font-size: var(--size-sm);
+  color: var(--color-gold-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: 0.25rem;
+}
+
+.navList, .contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navLink, .contactList a {
+  font-family: var(--font-sans);
+  font-size: var(--size-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover, .contactList a:hover {
+  color: var(--color-text-body); /* Slightly brighter on hover */
+}
+
+.socialsList {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socialsList a {
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.socialsList a:hover {
+  color: var(--color-text-body);
+  transform: translateY(-2px);
+}
+
+.conciergeText {
+  font-family: var(--font-sans);
+  font-size: var(--size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 0.5rem 0;
+}
+
+.emailBtn {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: var(--size-sm);
+  color: var(--color-gold-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-gold-light);
+  padding-bottom: 2px;
+  width: fit-content;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+}
+
+.emailBtn:hover {
+  color: var(--color-gold-primary);
+  border-bottom-color: var(--color-gold-primary);
+}
+
+.bottomBar {
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--space-xl);
+  font-family: var(--font-sans);
+  font-size: var(--size-xs);
+  color: var(--color-text-muted);
+  text-align: left; /* Align left to match standard footers, or center if you prefer */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .conciergeCol {
+    grid-column: 1 / -1; /* Span full width on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
