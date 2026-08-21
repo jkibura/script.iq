@@ -373,7 +373,7 @@ export const brandFooter: BrandFooter = {
 export const socials: Socials = {
   instagram: {
       icon: FaInstagram,
-      href: 'https://www.instagram.com/script.iq-notebooks/',
+      href: 'https://www.instagram.com/script.iq_notebooks/',
       arialabel: 'Instagram',
     },
     linkedin: {
