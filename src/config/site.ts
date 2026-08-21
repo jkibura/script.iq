@@ -2,7 +2,7 @@ import type { WhatsAppConfig, Contact } from "../types"
 
 
 export const whatsAppConfig: WhatsAppConfig = {
-    whatsAppNumber: '+254798864813',
+    whatsAppNumber: '+254797482728',
     businessName: 'ScriptIQ Notebooks',
     label: 'Please type your enquiry.',
     statusMessage: 'Typically replies within 24 hours.',
